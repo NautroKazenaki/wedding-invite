@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react';
 
 import FirstSection from './components/FirstSection/FirstSection';
 import SecondSection from './components/SecondSection/SecondSection';
+import ThirdSection from './components/ThirdSection/ThirdSection';
+import FourthSection from './components/FourthSection/FourthSection';
 
 function App() {
   const weddingDate = useMemo(() => new Date('2024-10-15T12:00:00'), []);
@@ -38,6 +40,8 @@ function App() {
     <div className="App">
       <FirstSection timeLeft={timeLeft} />
       <SecondSection />
+      <ThirdSection />
+      <FourthSection />
     </div>
   );
 }
