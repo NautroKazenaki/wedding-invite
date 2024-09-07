@@ -1,0 +1,60 @@
+.firstSection {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../images/weddFirstSection.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .middleInfoForm {
+    display: flex;
+    justify-content: space-around;
+    height: 36%;
+    width: 36%;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 5vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .middleInfoForm span {
+    font-family: 'Caveat', cursive;
+  }
+  .middleInfoForm p {
+    font-family: 'Caveat', cursive;
+    font-size: 3vh;
+    margin: 0;
+  }
+  .countdown {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+  }
+  .countdownCircle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 192, 203, 0.8); /* Мягкорозовый цвет */
+    color: white;
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  .countdownCircle span {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .countdownCircle p {
+    font-size: 14px;
+    margin: 0;
+  }

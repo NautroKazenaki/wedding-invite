@@ -1,0 +1,182 @@
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+}
+
+@property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+}
+
+@property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
+
+:root {
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+}
+
+.mainContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    margin-top: 1%
+}
+
+.labelsContainer h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 10vh;
+    color: pink;
+    margin: 0;
+}
+
+.labelsContainer h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 5vh;
+    color: black;
+    margin: 0;
+}
+
+.labelsContainer h4 {
+    font-family: 'Caveat', cursive;
+    font-size: 3vh;
+    color: rgb(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 36%;
+    width: 60%;
+    color: black;
+    font-size: 5vh;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+}
+
+.leftInfo {
+    width: 30vw;
+    font-size: 3vw;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.leftInfo h3 {
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    font-size: 4vh;
+    color: pink
+}
+
+.customButton {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    border: none !important;
+    padding: 0 !important;
+    color: #656565;
+    background: white;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 4px 50px 0 rgb(0 0 0 / 7%);
+    transition: .2s all linear;
+    text-decoration: initial;
+    font-family: 'Caveat', cursive;
+    font-size: 2vh;
+}
+
+.customButton:hover {
+    cursor: pointer;;
+}
+
+
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+.leftInfo h4 {
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    font-size: 3vh;
+    color: rgb(0, 0, 0, 0.5);
+}
+
+.leftImg img {
+    width: 90%;
+    border-radius: 50%;
+}
+
+.right {
+    composes: left;
+    margin-left: 2%;
+}
+
+.rightInfo {
+    composes: leftInfo;
+}
+.rightImg {
+    composes: leftImg;
+}
